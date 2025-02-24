@@ -30,4 +30,4 @@ const p1 = new Person("SOhan", "zxc@gmail.com");
 p1.setName("Irfanul Islam");
 p1.setEmail("irfan@gmail.com");
 console.log(p1.getName(), p1.getEmail());
-p1.sendMail("WOW       OOOO")
+p1.sendMail("WOW       OOOO") // msg wow       oooo
