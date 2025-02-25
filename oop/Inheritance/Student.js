@@ -1,5 +1,7 @@
-class Student {
-  constructor(subjects, fee) {
+const Person = require('./Person')
+class Student extends Person {
+  constructor(name,email,subjects, fee) {
+    super(name,email)
     this._subjects = subjects;
     this._fee = fee;
   }
