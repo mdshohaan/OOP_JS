@@ -18,6 +18,9 @@ class Person {
     if (p1.email !== p2.email) return false;
     return true;
   }
+  print(){
+    console.log(this);
+  }
 }
 const p1 = new Person("sohan", "abc@gmail.com");
 const p3 = new Person("sohan", "abc@gmail.com");
@@ -47,5 +50,5 @@ console.log(p1.name === p3.name); // true
 //Two object never same but their properties can be same 
 console.log(p1 === p3); // false because of object never be same 
 
-
+p1.print() 
 module.exports= Person

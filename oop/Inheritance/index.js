@@ -24,3 +24,4 @@ console.log(t);
 console.log(t.name); // Irfan
 console.log(t instanceof Teacher); // true
 console.log(t instanceof Person); // true 
+s.print()
