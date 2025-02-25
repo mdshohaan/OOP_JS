@@ -19,7 +19,7 @@ class Person {
     return true;
   }
   print(){
-    console.log(this);
+    console.log(this + "");
   }
 }
 const p1 = new Person("sohan", "abc@gmail.com");

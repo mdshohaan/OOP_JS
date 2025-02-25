@@ -12,5 +12,9 @@ class Teacher extends Person {
   get salary() {
     return this._salary;
   }
+  print(){
+    super.print()
+    console.log(`subjects:${this.subject},fee:${this.salary}`);
+  }
 }
 module.exports = Teacher;
