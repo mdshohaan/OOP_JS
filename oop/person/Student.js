@@ -12,5 +12,30 @@ class Student extends UniPerson {
     this[_exams] = [];
     this[_fee] = null;
   }
+  get studentID() {
+    return this[_studentID];
+  }
+  get guardian() {
+    return this[_guardian];
+  }
+  get exams() {
+    return this[_exams];
+  }
+  set exams(value) {
+    this[_exams] = value;
+  }
+  addExam(exam) {
+    this[_exams].push(exam);
+  }
+  get fee() {
+    return this[_fee];
+  }
+  set fee(value) {
+    this[_fee] = value;
+  }
+  toString() {
+    super.toString();
+    console.log(`StudentID=${this[_studentID ]}`);
+  }
 }
 module.exports = Student;

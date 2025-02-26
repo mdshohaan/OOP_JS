@@ -26,4 +26,4 @@ class UniPerson extends Person {
     console.log(`Account:${this[_account]}`);
   }
 }
-export default UniPerson;
+module.exports = UniPerson;
