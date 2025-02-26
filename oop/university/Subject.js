@@ -23,5 +23,12 @@ class Subject {
   set credit(value) {
     this[_credit] = value;
   }
+  toString() {
+    return `
+    ID:${this[_id]},
+    Name:${this[_name]},
+    Credit:${this[_credit]},
+     `;
+  }
 }
 module.exports = Subject;
