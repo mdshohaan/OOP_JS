@@ -1,7 +1,7 @@
-const _id = symbol("id");
-const _name = symbol("name");
-const _blood = symbol("blood");
-const _contact = symbol("contact");
+const _id = Symbol("id");
+const _name = Symbol("name");
+const _blood = Symbol("blood");
+const _contact = Symbol("contact");
 
 class Person {
   constructor(id, name) {
@@ -31,4 +31,9 @@ class Person {
   set contact(value) {
     this[_contact] = value;
   }
+  toString() {
+    return `${this[_id]} - ${this[_name]}`;
+  }
 }
+
+module.exports = Person;
