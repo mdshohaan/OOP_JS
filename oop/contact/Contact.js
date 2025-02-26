@@ -11,5 +11,41 @@ class Contact {
     this[_alternativePhone] = alternativePhone || "";
     this[_address] = address || null;
   }
+  get id() {
+    return this[_id];
+  }
+  get _email() {
+    return this[__email];
+  }
+  set _email(value) {
+    this[__email] = value;
+  }
+  get phone() {
+    return this[_phone];
+  }
+  set phone(value) {
+    this[_phone] = value;
+  }
+  get alternativePhone() {
+    return this[_alternativePhone];
+  }
+  set alternativePhone(value) {
+    this[_alternativePhone] = value;
+  }
+  get address() {
+    return this[_address];
+  }
+  set address(value) {
+    this[_address] = value;
+  }
+  toString() {
+    return `
+    ID:${this[_id]},
+    Email:${this[_email]},
+    Phone:${this[_phone]},
+    AlternativePhone${thsi[_alternativePhone]},
+    Address:${this[_address]},
+  `;
+  }
 }
 module.exports = Contact;
