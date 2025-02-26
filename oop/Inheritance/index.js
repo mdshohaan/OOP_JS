@@ -24,5 +24,10 @@ console.log(t);
 console.log(t.name); // Irfan
 console.log(t instanceof Teacher); // true
 console.log(t instanceof Person); // true 
+
 s.print()
 t.print()
+// [object Object]
+// subjects:computer,math,fee:4000
+// [object Object]
+// subjects:computer Fundamentda,fee:8000
