@@ -44,11 +44,11 @@ const credit = student.department.subjects.reduce((acc, curr) => {
   return acc;
 }, 0);
 //console.log(credit);
+
 // Teachers
-const dean = new Teacher(1, "biplob", department.subjects[0]);
+const dean = new Teacher(1, "biplob", department.subjects[0], "EMP001");
 dean.blood = "A+";
 dean.department = department;
-dean.employeeID = "EMP001";
 dean.salary = 10000;
 dean.contact = new Contact({
   id: 3,
@@ -63,9 +63,44 @@ dean.contact = new Contact({
     postalCode: 1200,
   }),
 });
+
 // TODO: update deans information
-const teacher1 = new Teacher(1, "Afzal", department.subjects[1]);
-const teacher2 = new Teacher(2, "Akram", department.subjects[2]);
+const teacher1 = new Teacher(1, "Afzal", department.subjects[1], "EMP002");
+teacher1.blood = "A+";
+teacher1.department = department;
+teacher1.salary = 10000;
+teacher1.contact = new Contact({
+  id: 4,
+  email: "abczxc@gmail.com",
+  phone: 1234856,
+  address: new Address({
+    id: 3,
+    roadNo: 12,
+    city: "CTG",
+    region: "Bd",
+    country: "Bangladesh",
+    postalCode: 1200,
+  }),
+});
+
+const teacher2 = new Teacher(2, "Akram", department.subjects[2], "EMP003");
+teacher2.blood = "B+";
+teacher2.department = department;
+teacher2.salary = 10000;
+teacher2.contact = new Contact({
+  id: 5,
+  email: "addddc@gmail.com",
+  phone: 1234856,
+  address: new Address({
+    id: 4,
+    roadNo: 12,
+    city: "CTG",
+    region: "Bd",
+    country: "Bangladesh",
+    postalCode: 1200,
+  }),
+});
+
 department.dean = dean;
 department.addTeacher(dean);
 department.addTeacher(teacher1);
@@ -74,3 +109,4 @@ department.addTeacher(teacher2);
 student.department.teachers.forEach((teacher, idx) => {
   console.log(`${idx + 1},${teacher.name},${teacher.subject.name}`);
 });
+console.log(dean.department);

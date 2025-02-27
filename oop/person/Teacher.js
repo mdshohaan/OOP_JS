@@ -2,8 +2,8 @@ const Employee = require("./Employee");
 const _subject = Symbol("subject");
 
 class Teacher extends Employee {
-  constructor(id, name, subject) {
-    super(id, name);
+  constructor(id, name, subject,EmployeeID) {
+    super(id, name,EmployeeID);
     this[_subject] = subject;
   }
   get subject() {
