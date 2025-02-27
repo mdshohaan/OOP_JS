@@ -52,7 +52,7 @@ class Address {
     ID:${this[_id]},
     RoadNo:${this[_roadNo]},
     City:${this[_city]},
-    Region${thsi[_region]},
+    Region${this[_region]},
     Country:${this[_country]},
     PostalCode${this[_postalCode]}`;
   }

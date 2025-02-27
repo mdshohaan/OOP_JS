@@ -43,7 +43,7 @@ class Contact {
     ID:${this[_id]},
     Email:${this[_email]},
     Phone:${this[_phone]},
-    AlternativePhone${thsi[_alternativePhone]},
+    AlternativePhone${this[_alternativePhone]},
     Address:${this[_address]},
   `;
   }
