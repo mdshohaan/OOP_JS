@@ -114,4 +114,12 @@ const teacherSalary = department.teachers.reduce((acc, curr) => {
   acc += curr.salary;
   return acc;
 }, 0);
-console.log("Teacher salary",teacherSalary);
+console.log("Teacher salary", teacherSalary);
+// check blood group
+let count = 0;
+if (student.blood === "O+") count++;
+if (student.guardian.blood === "O+") count++;
+department.teachers.forEach((teacher) => {
+  if (teacher.blood === "O+") count++;
+});
+console.log(count);
