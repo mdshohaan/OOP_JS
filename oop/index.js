@@ -110,3 +110,8 @@ student.department.teachers.forEach((teacher, idx) => {
   console.log(`${idx + 1},${teacher.name},${teacher.subject.name}`);
 });
 console.log(dean.department);
+const teacherSalary = department.teachers.reduce((acc, curr) => {
+  acc += curr.salary;
+  return acc;
+}, 0);
+console.log("Teacher salary",teacherSalary);
