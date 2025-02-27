@@ -46,7 +46,23 @@ const credit = student.department.subjects.reduce((acc, curr) => {
 //console.log(credit);
 // Teachers
 const dean = new Teacher(1, "biplob", department.subjects[0]);
-
+dean.blood = "A+";
+dean.department = department;
+dean.employeeID = "EMP001";
+dean.salary = 10000;
+dean.contact = new Contact({
+  id: 3,
+  email: "abc@gmail.com",
+  phone: 1234856,
+  address: new Address({
+    id: 2,
+    roadNo: 12,
+    city: "CTG",
+    region: "Bd",
+    country: "Bangladesh",
+    postalCode: 1200,
+  }),
+});
 // TODO: update deans information
 const teacher1 = new Teacher(1, "Afzal", department.subjects[1]);
 const teacher2 = new Teacher(2, "Akram", department.subjects[2]);
