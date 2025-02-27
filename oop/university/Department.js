@@ -46,7 +46,7 @@ class Department {
     return `
     ID:${this[_id]}, 
     Name:${this[_name]},
- 
+    Subject:${this[_subjects]}
   `;
   }
 }

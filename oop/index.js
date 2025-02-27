@@ -1,4 +1,5 @@
 const Guardian = require("./person/Guardian");
+const Teacher = require("./person/Teacher");
 const Student = require("./person/Student");
 const Contact = require("./contact/Contact");
 const Address = require("./contact/Address");
@@ -38,4 +39,22 @@ department.subjects = [
   new Subject(2, "ICT", 5),
   new Subject(3, "Math", 3),
 ];
-console.log(student);
+const credit = student.department.subjects.reduce((acc, curr) => {
+  acc = acc + curr.credit;
+  return acc;
+}, 0);
+//console.log(credit);
+// Teachers
+const dean = new Teacher(1, "biplob", department.subjects[0]);
+
+// TODO: update deans information
+const teacher1 = new Teacher(1, "Afzal", department.subjects[1]);
+const teacher2 = new Teacher(2, "Akram", department.subjects[2]);
+department.dean = dean;
+department.addTeacher(dean);
+department.addTeacher(teacher1);
+department.addTeacher(teacher2);
+// console.log(student.department);
+student.department.teachers.forEach((teacher, idx) => {
+  console.log(`${idx + 1},${teacher.name},${teacher.subject.name}`);
+});
