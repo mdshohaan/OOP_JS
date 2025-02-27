@@ -1,7 +1,9 @@
 const Guardian = require("./person/Guardian");
-const Student = require("./person/Student.js");
+const Student = require("./person/Student");
 const Contact = require("./contact/Contact");
 const Address = require("./contact/Address");
+const Department = require("./university/Department");
+const Subject = require("./university/Subject");
 
 // Guardian ID:1
 const guardian = new Guardian(1, "arif", "Teacher", 500);
@@ -15,28 +17,25 @@ guardian.contact.address = new Address({
   country: "Bangladesh",
   postalCode: 1200,
 });
-//console.log(guardian.toString());
+
 //console.log(guardian.contact + ""); // console.log(guardian.contact.toString());[same output shows]
 
 // Student ID:1
-const student = new Student(1, "rofiq", 'ST001', guardian);
-student.blood = "O-"
+const student = new Student(1, "rofiq", "ST001", guardian);
+student.blood = "O-";
 student.contact = new Contact({
-  id:1,
-  email:"zzz@gmail.com",
-  phone:111111,
-  alternativePhone:student.guardian.contact.phone,
-  address:student.guardian.contact.address
-})
-console.log(student.contact.toString());
-// ID:1,
-// Email:zzz@gmail.com,
-// Phone:111111,
-// AlternativePhone12345,
-// Address:
-// ID:1,
-// RoadNo:12,
-// City:CTG,
-// RegionBD,
-// Country:Bangladesh,
-// PostalCode1200,
+  id: 1,
+  email: "zzz@gmail.com",
+  phone: 111111,
+  alternativePhone: student.guardian.contact.phone,
+  address: student.guardian.contact.address,
+});
+
+const department = new Department({ id: 1, name: "SWE" });
+student.department = department;
+department.subjects = [
+  new Subject(1, "computer", 4),
+  new Subject(2, "ICT", 5),
+  new Subject(3, "Math", 3),
+];
+console.log(student);
