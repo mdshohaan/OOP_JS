@@ -57,11 +57,32 @@ function increase(value) {
   number.value++;
 }
 increase(number.value);
-console.log(number); // 11
+//console.log(number); // 11
 // primitive are copied by their value and premitive are independent
 let number1 = 10;
 function increase(number1) {
   number1++;
 }
 increase(number1);
-console.log(number1); // 10
+//console.log(number1); // 10
+
+//when get properties from object
+function Circle1(radius) {
+  this.radius = radius;
+  this.draw = function () {
+    console.log("draw");
+  };
+}
+const another1 = new Circle1(1);
+
+for (let key in Circle1) {
+  console.log(key); // radius ,draw
+  console.log(circle1[key]); // radius 10,draw f()   [key and value show  ]
+}
+// also used in (Object.keys) return an array of all key from object
+const allKeys = Object.keys(Circle);
+console.log(allKeys);
+
+if ("radius" in Circle1) {
+  console.log("radius are allow");
+}
