@@ -26,4 +26,14 @@ function createCircle(radius) {
   };
 }
 const circle = createCircle(1);
-console.log(circle);
+console.log(circle); //{ radius: 1, draw: [Function: draw] }
+
+// Constructor function
+function Circle(radius) {
+  this.radius = radius;
+  this.draw = function () {
+    console.log("draw");
+  };
+}
+const another = new Circle(1);
+console.log(another);
