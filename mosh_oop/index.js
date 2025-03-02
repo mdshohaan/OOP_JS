@@ -28,7 +28,7 @@ function createCircle(radius) {
   };
 }
 const circle = createCircle(1);
-console.log(circle); //{ radius: 1, draw: [Function: draw] }
+// console.log(circle); //{ radius: 1, draw: [Function: draw] }
 
 // Constructor function
 function Circle(radius) {
@@ -39,6 +39,17 @@ function Circle(radius) {
 }
 const another = new Circle(1);
 //console.log(another);
+//* when add properties in OOP
+// Bracket notation is useful when:
+// 	•	The property name is dynamic (coming from a variable).
+// 	•	The property name is not a valid identifier (e.g., contains spaces or special characters).
+//   const propName = "location";
+//   Circle[propName] = { x: 1 }; // Works the same as Circle.location = { x: 1 };
+//   Circle["some property"] = "value"; // Works
+//  Circle.some property = "value"; // ❌ This will cause an error
+
+Circle.location = { x: 1 }; //or
+Circle["location"] = { x: 1 };
 
 // non-primitive are copied by their referrence
 let number = { value: 10 };
