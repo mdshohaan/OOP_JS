@@ -1,3 +1,5 @@
+const { func } = require("prop-types");
+
 // Procedural way
 let baseSalary = 3000;
 let overTime = 10;
@@ -36,4 +38,19 @@ function Circle(radius) {
   };
 }
 const another = new Circle(1);
-console.log(another);
+//console.log(another);
+
+// non-primitive are copied by their referrence
+let number = { value: 10 };
+function increase(value) {
+  number.value++;
+}
+increase(number.value);
+console.log(number); // 11
+// primitive are copied by their value and premitive are independent
+let number1 = 10;
+function increase(number1) {
+  number1++;
+}
+increase(number1);
+console.log(number1); // 10
