@@ -6,6 +6,7 @@ function Person(name, email) {
   this.email = email;
 }
 const p1 = new Person("irfan", "abc@gmail.com");
-console.log(p1.name);
+const p2 = new Person("irfanul islam", "xyz@gmail.com");
+const people = [p1, p2];
 
-console.log(p1);
+console.log(people);
