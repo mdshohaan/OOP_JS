@@ -12,5 +12,18 @@ var book = {
     console.log(this.name, this.author);
   },
 };
+// console.log(book);
+book.publishedYear = 2019;
+book["certfied"] = true;
 console.log(book);
-book.print();
+// {
+//   name: 'Bangladesh studies',
+//   author: 'Bangabondu',
+//   publisher: true,
+//   publishedYear: 2019,
+//   certfied: true,
+//   print: λ
+// }
+
+// console.log(book.author);
+// console.log(book["author"]);
