@@ -27,3 +27,25 @@ console.log(book);
 
 // console.log(book.author);
 // console.log(book["author"]);
+
+// In A object to get all Key
+for (var props in book) {
+  console.log(props);
+}
+// 'name'
+// 'author'
+// 'publisher'
+// 'print'
+// 'publishedYear'
+// 'certfied'
+
+// In A object to get all value
+for (var props in book) {
+  console.log(book[props]);
+}
+// 'Bangladesh studies'
+// 'Bangabondu'
+// true
+// λ
+// 2019
+// true
