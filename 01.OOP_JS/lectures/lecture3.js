@@ -10,13 +10,15 @@ const myObj = obj.print.bind(obj);
 myObj();
 
 function add(num) {
+  console.log(this); // { value: 10 }
   return this.value + num;
 }
 let obj1 = {
   value: 10,
 };
-let res = add(10);
-res; // NaN
+// let res = add(10);
+// res; // NaN
 
-let res1 = add.bind(obj1, 20);
-console.log(res1()); // 30
+let binded = add.bind(obj1);
+let res1 = binded(23);
+res1; // 33
